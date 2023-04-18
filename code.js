@@ -25,7 +25,7 @@ let renderTodoApp = function () {
     unordList.append(list)
 
     //Step Three begining
-    //for the list items
+    //style the items list
     list.style.width = '200px'
     list.style.height = '200px'
     list.style.backgroundColor = 'lightgray'
@@ -36,26 +36,15 @@ let renderTodoApp = function () {
   }
   app.append(unordList)
 
+    //Step Three Ends
+    //center the title 
   newElement.style.textAlign= 'center'
+
+  //organize the items list using their parentNode
   unordList.style.display= "flex"
   unordList.style.flexWrap= 'wrap'
   unordList.style.margin= '0 200px'
   unordList.style.paddingLeft= '55px'
-  //Step Three Ending
-  //for the div and this centers the title text
-  // app.style.display = 'flex'
-  // app.style.flexDirection = 'column'
-  // app.style.alignItems = 'center'
-
-  // console.log(app.firstElementChild)
-
-  //for the ul
-  // unordList.style.display = 'flex'
-  // unordList.style.margin = '15px 200px'
-  // unordList.style.flexWrap = 'wrap'
-
-  // I added this to center the list items to the title h3
-  // unordList.style.paddingLeft = '45px'
 }
 
 renderTodoApp();
