@@ -29,28 +29,33 @@ let renderTodoApp = function () {
     list.style.width = '200px'
     list.style.height = '200px'
     list.style.backgroundColor = 'lightgray'
-    list.style.margin = '0 40px 20px 30px'
+    list.style.margin = '10px 30px'
     list.style.padding = '10px'
     list.style.listStyle = 'none'
 
   }
   app.append(unordList)
 
+  newElement.style.textAlign= 'center'
+  unordList.style.display= "flex"
+  unordList.style.flexWrap= 'wrap'
+  unordList.style.margin= '0 200px'
+  unordList.style.paddingLeft= '55px'
   //Step Three Ending
   //for the div and this centers the title text
-  app.style.display = 'flex'
-  app.style.flexDirection = 'column'
-  app.style.alignItems = 'center'
+  // app.style.display = 'flex'
+  // app.style.flexDirection = 'column'
+  // app.style.alignItems = 'center'
 
-  console.log(app.firstElementChild)
+  // console.log(app.firstElementChild)
 
   //for the ul
-  unordList.style.display = 'flex'
-  unordList.style.margin = '15px 200px'
-  unordList.style.flexWrap = 'wrap'
+  // unordList.style.display = 'flex'
+  // unordList.style.margin = '15px 200px'
+  // unordList.style.flexWrap = 'wrap'
 
   // I added this to center the list items to the title h3
-  unordList.style.paddingLeft = '45px'
+  // unordList.style.paddingLeft = '45px'
 }
 
 renderTodoApp();
