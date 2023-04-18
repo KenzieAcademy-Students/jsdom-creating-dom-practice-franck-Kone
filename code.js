@@ -15,7 +15,6 @@ let app = document.getElementById('app')
 let newElement = document.createElement('h3')
 newElement.innerText = 'Todo List'
 app.append(newElement)
-console.log(app)
 
   // Step Two
   let unordList = document.createElement('ul')
@@ -24,10 +23,39 @@ console.log(app)
     list.classList.add('list-item')
     list.innerText = item
     unordList.append(list)
+
+    //Step Three begining
+    //for the list items
+    list.style.width = '200px'
+    list.style.height = '200px'
+    list.style.backgroundColor = 'lightgray'
+    list.style.margin = '0 40px 20px 30px'
+    list.style.padding = '10px'
+    list.style.listStyle = 'none'
+
+    //that better matches the expexted result but they did not ask us to do that
+    list.style.fontWeight = '800'
+   
   }
   app.append(unordList)
 
- 
+ //Step Three Ending
+ //for the div and this centers the title text
+ app.style.display= 'flex'
+ app.style.flexDirection = 'column'
+ app.style.alignItems= 'center'
+
+  console.log(app.firstElementChild)
+
+ //for the ul
+ unordList.style.display= 'flex'
+ unordList.style.marginLeft= '200px'
+ unordList.style.marginRight= '200px'
+//  unordList.style.paddingLeft= '50px'
+  // I add this to center the list items to the title h3
+ unordList.style.flexWrap= 'wrap'
+  unordList.firstElementChild.style.marginLeft= '30px'
+  
 }
 
 renderTodoApp();
