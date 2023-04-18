@@ -7,18 +7,18 @@ let todos = [
   "Dry Clean the Suits"
 ];
 
-let renderTodoApp = function() {
+let renderTodoApp = function () {
   // Follow the instructions on my.kenzie.academy to complete the assignment.
   // Your Code Here
   // Step One 
-let app = document.getElementById('app')
-let newElement = document.createElement('h3')
-newElement.innerText = 'Todo List'
-app.append(newElement)
+  let app = document.getElementById('app')
+  let newElement = document.createElement('h3')
+  newElement.innerText = 'Todo List'
+  app.append(newElement)
 
   // Step Two
   let unordList = document.createElement('ul')
-  for(let item of todos){
+  for (let item of todos) {
     let list = document.createElement('li')
     list.classList.add('list-item')
     list.innerText = item
@@ -33,29 +33,24 @@ app.append(newElement)
     list.style.padding = '10px'
     list.style.listStyle = 'none'
 
-    //that better matches the expexted result but they did not ask us to do that
-    list.style.fontWeight = '800'
-   
   }
   app.append(unordList)
 
- //Step Three Ending
- //for the div and this centers the title text
- app.style.display= 'flex'
- app.style.flexDirection = 'column'
- app.style.alignItems= 'center'
+  //Step Three Ending
+  //for the div and this centers the title text
+  app.style.display = 'flex'
+  app.style.flexDirection = 'column'
+  app.style.alignItems = 'center'
 
   console.log(app.firstElementChild)
 
- //for the ul
- unordList.style.display= 'flex'
- unordList.style.marginLeft= '200px'
- unordList.style.marginRight= '200px'
-//  unordList.style.paddingLeft= '50px'
-  // I add this to center the list items to the title h3
- unordList.style.flexWrap= 'wrap'
-  unordList.firstElementChild.style.marginLeft= '30px'
-  
+  //for the ul
+  unordList.style.display = 'flex'
+  unordList.style.margin = '15px 200px'
+  unordList.style.flexWrap = 'wrap'
+
+  // I added this to center the list items to the title h3
+  unordList.style.paddingLeft = '45px'
 }
 
 renderTodoApp();
